@@ -5,12 +5,12 @@
 ;;; it under the terms of the GNU General Public License as published by
 ;;; the Free Software Foundation, either version 3 of the License, or
 ;;; (at your option) any later version.
-;;; 
+;;;
 ;;; This program is distributed in the hope that it will be useful,
 ;;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;;; GNU General Public License for more details.
-;;; 
+;;;
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -39,7 +39,7 @@
      (white "white")
      ;; Literal values, constants, quotes, etc.
      (chateu-green "#43b25e")
-     ;; Keywords, prompts, user interface hilights etc.     
+     ;; Keywords, prompts, user interface hilights etc.
      (shakespeare-blue "#4f9db0")
      ;; For names of stuff at the point of definition.
      (tussock-brown "#b99246")
@@ -64,7 +64,7 @@
      (default ((t (:background black :foreground celeste-gray))))
      (fringe ((t (:background passige-gray))))
      ;; TODO: Figure out where this shows.
-     (border ((t (:background undefined)))) 
+     (border ((t (:background undefined))))
      (mode-line ((t (:background bright-red :foreground celeste-gray))))
      (mode-line-buffer-id ((t (:background nil
 			       :foreground yellow))))
@@ -91,7 +91,7 @@
      (font-lock-comment-delimiter-face ((t (:foreground falcon-brown))))
      (font-lock-doc-face ((t (:foreground falcon-brown))))
      (font-lock-doc-string-face ((t (:foreground falcon-brown))))
-     (font-lock-string-face ((t (:foreground chateu-green))))	
+     (font-lock-string-face ((t (:foreground chateu-green))))
      (font-lock-constant-face ((t (:foreground chateu-green))))
      (font-lock-builtin-face ((t (:foreground shakespeare-blue))))
      (font-lock-keyword-face ((t (:foreground shakespeare-blue))))
