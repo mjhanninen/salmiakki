@@ -79,6 +79,13 @@
 			         :background shakespeare-blue))))
      (show-paren-mismatch-face ((t (:foreground black
 				    :background yellow))))
+     ;; Isearch
+     (isearch ((t (:foreground white
+                   :background bright-red))))
+     (lazy-highlight ((t (:foreground black
+                          :background shakespeare-blue))))
+     (isearch-fail ((t (:foreground black
+                        :background yellow))))
      ;; Standard font lock faces
      (font-lock-comment-face ((t (:foreground falcon-brown))))
      (font-lock-comment-delimiter-face ((t (:foreground falcon-brown))))
