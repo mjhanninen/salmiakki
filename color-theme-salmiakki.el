@@ -1,5 +1,5 @@
 ;;; color-theme-salmiakki.el -- a color theme for Emacs
-;;; Copyright (C) 2012 Matti Hänninen <mha@iki.fi>
+;;; Copyright (C) 2012-13 Matti Hänninen <mha@iki.fi>
 ;;;
 ;;; This program is free software: you can redistribute it and/or modify
 ;;; it under the terms of the GNU General Public License as published by
@@ -43,14 +43,17 @@
      (shakespeare-blue "#4f9db0")
      ;; For names of stuff at the point of definition.
      (tussock-brown "#b99246")
-     ;; Comments and lower priority information
+     ;; Comments and lower priority information.
+     ;; NB: Not used; will go out of door pretty soon.
      (falcon-brown "#755169")
      ;; The primary attention color
      (bright-red "#ff0000")
      ;; The secondary attention color
      (yellow "yellow")
      ;; Inactive background elements
-     (passige-gray "gray10")
+     (passive-background "gray10")
+     ;; Line numbers and stuff like that
+     (passive-foreground "gray30")
      ;; There shouldn't be any of these
      (undefined "violet"))
     ;; Theme definition
@@ -62,18 +65,20 @@
       (mouse-color . bright-red))
      ;; Basic and GUI element faces
      (default ((t (:background black :foreground celeste-gray))))
-     (fringe ((t (:background passige-gray))))
+     (fringe ((t (:background passive-background))))
+     (linum ((t (:background black :foreground passive-foreground))))
      ;; TODO: Figure out where this shows.
      (border ((t (:background undefined))))
      (mode-line ((t (:background bright-red :foreground celeste-gray))))
      (mode-line-buffer-id ((t (:background nil
 			       :foreground yellow))))
-     (mode-line-inactive ((t (:background passige-gray
+     (mode-line-inactive ((t (:background passive-background
 			      :foreground celeste-gray))))
      (minibuffer-prompt ((t (:foreground shakespeare-blue))))
      (completions-first-difference ((t (:foreground shakespeare-blue))))
-     (region ((t (:background "navy")))) ; TODO: find better color
-     ;; Mathing parenthesis
+     ;; TODO: find better color
+     (region ((t (:background "navy"))))
+     ;; Matching parenthesis
      ;; TODO: Not totally satisfied how these two work.
      (show-paren-match-face ((t (:foreground black
 			         :background shakespeare-blue))))
@@ -87,10 +92,10 @@
      (isearch-fail ((t (:foreground black
                         :background yellow))))
      ;; Standard font lock faces
-     (font-lock-comment-face ((t (:foreground falcon-brown))))
-     (font-lock-comment-delimiter-face ((t (:foreground falcon-brown))))
-     (font-lock-doc-face ((t (:foreground falcon-brown))))
-     (font-lock-doc-string-face ((t (:foreground falcon-brown))))
+     (font-lock-comment-face ((t (:foreground passive-foreground))))
+     (font-lock-comment-delimiter-face ((t (:foreground passive-foreground))))
+     (font-lock-doc-face ((t (:foreground passive-foreground))))
+     (font-lock-doc-string-face ((t (:foreground passive-foreground))))
      (font-lock-string-face ((t (:foreground chateu-green))))
      (font-lock-constant-face ((t (:foreground chateu-green))))
      (font-lock-builtin-face ((t (:foreground shakespeare-blue))))
@@ -122,7 +127,7 @@
      (font-latex-slide-title-face ((t (:foreground undefined))))
      ;; Post
      (post-emoticon-face ((t (:background undefined
-			      :foreground "#000000"))))
+			      :foreground black))))
      (post-header-value-face ((t (:foreground undefined))))
      (post-header-keyword-face ((t (:foreground undefined :bold t))))
      (post-signature-text-face ((t (:foreground undefined))))
@@ -141,10 +146,10 @@
      (dired-directory ((t (:foreground shakespeare-blue))))
      (dired-flagged ((t (:foreground chateu-green))))
      (dired-header ((t (:foreground white))))
-     (dired-ignored ((t (:foreground falcon-brown))))
+     (dired-ignored ((t (:foreground passive-foreground))))
      (dired-mark ((t (:foreground chateu-green))))
      (dired-marked ((t (:foreground chateu-green))))
      (dired-symlink ((t (:foreground shakespeare-blue))))
-     (dired-warning ((t (:foreground falcon-brown))))))))
+     (dired-warning ((t (:foreground passive-foreground))))))))
 
 (provide 'color-theme-salmiakki)
